@@ -1,0 +1,209 @@
+/* Global View aka Desktop View */
+html {
+    background-image: url(images/background-image.png);
+    background-position: center;
+    background-color: rgba(219, 219, 219, 0.6);
+}
+body {
+    font-family: 'Asap', sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color: rgb(60, 60, 60);
+    min-height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    max-width: 1024px;
+    /* background-color: blueviolet; */
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: rgb(43, 226, 147);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.col:hover {
+    color:rgb(51, 51, 51);
+    background-color: rgb(108, 255, 145);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.col p {
+    font-size: 0.825rem;
+    padding: 20px 25px;
+    line-height: 1.25rem;
+}
+
+
+.hide-desktop-only {
+    display: none;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+} 
+
+.col p::first-line {
+    font-weight: 700;
+}
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+.logo {
+    font-size: 1.125rem;
+}
+
+
+
+/* Tablet View */
+@media (max-width: 768px){
+    
+.col {
+    width: 45%;
+}
+
+.hide-desktop-only {
+    display: block;
+}
+
+
+.header-container {
+    position: relative;
+}
+
+.container {
+    padding-top: 40px;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    display: block;
+   }
+
+.logo {
+    padding: 40px 0; 
+    padding-left: 30px;
+}
+
+.mybutton {
+    margin-left: 0;
+}
+
+.mob-wrapper {
+    display: block;
+    padding-right: 30px;
+}
+
+.mob-nav {
+    display: none;
+    position: fixed;
+    padding-top: 10px;
+}
+
+.navbutton {
+    display: block;
+    background-color: rgb(51, 51, 51);
+    padding: 15px 100px;
+    margin-left: -220px;
+    text-align: center;
+}
+
+.navbutton:hover {
+    color: rgb(59, 59, 59);
+    background-color: rgb(255, 255, 255);
+}
+
+.burgermenu {
+    width: 35px;
+}
+
+
+}
+
+
+
+/* Mobile View */
+@media (max-width: 414px){
+    
+    .col {
+        width: 100%;
+    }
+    
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .burgermenu {
+        width: 25px;
+    }
+
+    /* .mob-nav {
+        display: none;
+        position: fixed;
+        padding-top: 10px;
+    } */
+
+    .navbutton {
+        display: block;
+        background-color: rgb(51, 51, 51);
+        padding: 20px 35px;
+        margin-left: -100px;
+        text-align: center;
+    }
+
+
+
+}
+
